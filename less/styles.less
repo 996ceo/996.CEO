@@ -1,0 +1,161 @@
+body, html {
+	background: #2acca1;
+	font-size: 16px;
+	padding: 0px;
+	margin: 0px;
+	color: white;
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+}
+
+a {
+	color: #0c84ff;
+	&:hover {
+		color: #0c84ff;
+	}
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 500px;
+	.web_title {
+		width: 100%;
+	    background: #00000030;
+	    text-align: center;
+	    font-size: 27px;
+	    h1 {
+	    	font-size: 4rem;
+	    	margin: 0px;
+	    	padding: 0px;
+	    	line-height: 4rem;
+	    }
+	}
+
+	.point_to_your_face_box {
+		width: 100%;
+	    // background: linear-gradient(175deg, #a5c2f0, #6effa8);
+	    background: #00000030;
+		.point_to_your_face_img {
+			width: 100%;
+		}
+		.say {
+			font-size: 20px;
+			text-align: center;
+		}
+	}
+
+	.work_box {
+		border-radius: 2px;
+		width: 100%;
+	    background: #00000030;
+	    .line {
+	    	width: 100%;
+	    	height: 1px;
+	    	border-bottom: 1px solid white;
+	    	// background: white;
+	    	margin: 8px 30px 8px 0px;
+	    }
+	    .title {
+	    	padding: 0px;
+	    	margin: 0px;
+	    	font-size: 16px;
+	    }
+	    .contents {
+			p {
+				padding: 0px;
+				margin: 0px;
+				line-height: 25px;
+				.boss {
+					font-weight: bolder;
+				}
+			}
+	    }
+	}
+
+	.footer {
+		width: 100%;
+	    background: #00000030;
+	    text-align: right;
+	}
+
+	.mp {
+		margin: 10px;
+		padding: 10px;
+		width: calc(100% - 40px);
+	}
+}
+
+.big_focus {
+	text-decoration: underline;
+	font-weight: bolder;
+	margin: 0px 5px;
+}
+
+.table {
+	width: 100%;
+    border-collapse: collapse; 
+    border: 1px solid white;
+    th {
+	    border-collapse: collapse;
+	    border: 1px solid white;
+	    padding: 5px;	
+    }
+	td {
+	    border-collapse: collapse;
+	    border: 1px solid white;
+	    padding: 5px;
+	}
+}
+
+.audio_box {
+	width: 350px;
+	height: 120px;
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	overflow: hidden;
+	text-align: center;
+	.music_name {
+		width: 100%;
+		text-align: center;
+		line-height: 50px;
+	}
+	.music_name {
+	    display: block;
+	    /*渐变背景*/
+	    background-image: -webkit-linear-gradient(left, #3498db, #f47920 10%, #d71345 20%, #f7acbc 30%,
+	    #ffd400 40%, #3498db 50%, #f47920 60%, #d71345 70%, #f7acbc 80%, #ffd400 90%, #3498db);
+	    color: transparent; /*文字填充色为透明*/
+	    -webkit-text-fill-color: transparent;
+	    -webkit-background-clip: text;          /*背景剪裁为文字，只将文字显示为背景*/
+	    background-size: 200% 100%;            /*背景图片向水平方向扩大一倍，这样background-position才有移动与变化的空间*/
+	    /* 动画 */
+	    animation: masked-animation 4s infinite linear;
+	}
+}
+
+@keyframes masked-animation {
+    0% {
+        background-position: 0 0;   /*background-position 属性设置背景图像的起始位置。*/
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+	.container {
+		width: 100%;
+		max-width: 100%;
+		.work_box {
+			.contents {
+				p {
+				    // line-height: 70px;
+				}
+			}
+		}
+	}
+
+	.audio_box {
+		right: 9999px;
+	}
+}
